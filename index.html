@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Film By Genre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul id="listOfGenres">
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h3>Movies</h3>
+    <div id="searchLine">
+      <input type="text" id="searchInput">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div id="listOfMovies"></div>
+    </div>
+  </main>
+</body>
+<script src="./getGenres.js" type="module"></script>
+<script src="./getMovieBySearchedTitle.js" type="module"></script>
+
+</html>
