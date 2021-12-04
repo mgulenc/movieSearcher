@@ -2,7 +2,6 @@ import sendRequestToAPI from './sendRequestToAPI.js'
 
 export default async function getMovieById(id){
   let div=document.getElementById(id)
-  //check if the div has already children:
   if(div.hasChildNodes()){
     return}
   const result=await sendRequestToAPI(`https://data-imdb1.p.rapidapi.com/movie/id/${id}/`,"GET")
@@ -16,7 +15,7 @@ export default async function getMovieById(id){
   //img:
   let img=document.createElement("img")
   img.id="movie-img"
-  img.src=movie.image_url ? movie.image_url :  "./image-not-found.png"//!!!
+  img.src=movie.image_url.slice(0,4)==="http" ? movie.image_url :  './image-not-found.png'
   img.style.width="100px"
   //year:
   let year=document.createElement("p")
@@ -56,6 +55,6 @@ export default async function getMovieById(id){
   let article2=document.createElement("article")
   article2.className="right card-article"
   article2.append(titleLine,plot,length)
-  //append infos to the card!
+  //append infos to the card
   div.append(article1,article2)
 }

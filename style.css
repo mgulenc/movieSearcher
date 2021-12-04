@@ -1,90 +1,95 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-nav{
-  background-color: black;
-  padding: 10px;
-  box-shadow: 2px  2px lightgray;
+nav {
+    background-color: black;
+    padding: 10px;
+    box-shadow: 2px 2px lightgray;
 }
-#listOfGenres{
-  display: flex; 
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: stretch;
+#listOfGenres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
-.genre{
-  text-decoration: none;
-  display: inline;
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid gray;
-  color: whitesmoke;
-  cursor: pointer;
+.genre {
+    text-decoration: none;
+    display: inline;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid gray;
+    color: whitesmoke;
+    cursor: pointer;
 }
-main h3{
-  margin: 20px;
+main h3 {
+    margin: 20px;
 }
-#searchLine{
-  margin: 20px;
+#searchLine {
+    margin: 20px;
 }
-#searchInput{
-  border: 1.5px solid grey;
-  padding: 5px;
-  width: 250px;
+#searchInput {
+    border: 1.5px solid grey;
+    padding: 5px;
+    width: 250px;
 }
-#searchBtn{
-  padding: 5px 10px;
-  background-color: black;
-  color: whitesmoke;
+#searchBtn {
+    padding: 5px 10px;
+    background-color: black;
+    color: whitesmoke;
 }
-#listOfMovies{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 10px;
+#listOfMovies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 10px;
 }
-.movie-card{
-  width: 300px;
-  padding: 10px 20px;
-  margin: 5px 5px;
-  display: flex;
-  align-items: center;
-  background-color: black;
-  color: whitesmoke;
-  box-shadow: 3px  5px lightgray;
+.movie-card {
+    width: 300px;
+    padding: 10px 20px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: 3px 5px lightgray;
 }
-.movie-card div{color: whitesmoke;}
-.movie-card #movie-img{
-  margin-right: 10px;
-  border-radius: 20px;
+.movie-card div {
+    color: whitesmoke;
+}
+.movie-card #movie-img {
+    margin-right: 10px;
+    border-radius: 20px;
 }
 
-.movie-card .card-article{
-  display:flex;
-  flex-flow:column wrap;
-  justify-content: center;
-  align-items: center;
+.movie-card .card-article {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
-.card-article p{
-  margin:5px auto;
+.card-article p {
+    margin: 5px auto;
 }
-.card-article a{
-  margin:10px auto;
+.card-article a {
+    margin: 10px auto;
 }
-.card-article #movie-titleLine{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.card-article #movie-titleLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-#moreBtn{
-  width: 90vw;
-  height: 50px;
-  background-color: black;
-  color: whitesmoke;
-  font-weight: bold;
-  margin: 10px auto;
+#moreBtn {
+    width: 90vw;
+    max-width: 300px;
+    display: none;
+    height: 50px;
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+    margin: 10px auto;
 }
-#moreBtn:hover{
-  transform: translate(10px,5px);
+#moreBtn:hover {
+    transform: translate(10px, 5px);
 }

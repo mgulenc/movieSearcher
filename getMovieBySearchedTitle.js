@@ -4,9 +4,7 @@ import deleteExistingCards from './deleteExistingCards.js'
 
 async function getMovieIDsByTitle(title){
   const result=await sendRequestToAPI(`https://data-imdb1.p.rapidapi.com/movie/imdb_id/byTitle/${title}/`,"GET")
-  //response sample={"Result":[{imdb_id,title}=>]
-  const moviesCollection=result.Result
-  return moviesCollection
+  return result.results
 }
 
 async function getInput(){
@@ -16,10 +14,8 @@ async function getInput(){
     const userInput=document.getElementById("searchInput").value;
     const moviesCollection=await getMovieIDsByTitle(userInput)
     //create cards for each movie:
-    let counter=1;
     for (let i=0;i<moviesCollection.length;i++){
-      await createSingleCard(moviesCollection,i,counter)
-      counter++;
+      await createSingleCard(moviesCollection,i)
     }
   })
 }
